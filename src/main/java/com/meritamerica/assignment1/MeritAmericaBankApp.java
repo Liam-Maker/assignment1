@@ -15,7 +15,7 @@ public class MeritAmericaBankApp {
 		
 		myAccount.getSavingsAccount().withdraw(800);
 	
-		myAccount.getCheckingAccount().toString();
+		
 		System.out.println(myAccount.getCheckingAccount().toString());
 		
 	
