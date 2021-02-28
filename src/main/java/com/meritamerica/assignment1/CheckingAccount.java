@@ -1,18 +1,18 @@
 package com.meritamerica.assignment1;
 
-
 public class CheckingAccount {
 	
 	 final double ANNUAL_INTEREST_RATE =  .0001;
 		protected double currentBalance;
 		
 		public CheckingAccount(double openingBalance) {
-			currentBalance = openingBalance;
+			currentBalance += openingBalance;
 		}
 		public double getBalance() {
 			return currentBalance;
 		}
-		public double getInterest() {
+		public double getInterestRate() {
+			
 			return ANNUAL_INTEREST_RATE; 
 		}
 		public boolean withdraw(double amount) {
@@ -35,7 +35,7 @@ public class CheckingAccount {
 		}
 		
 		public double futureValue(int years) {
-			return currentBalance * Math.pow(1 + ANNUAL_INTEREST_RATE, years);
+			return currentBalance * Math.pow(1 + ANNUAL_INTEREST_RATE*100, years);
 		}
 		
 		public String toString(){
@@ -44,7 +44,4 @@ public class CheckingAccount {
 				"Checking Account Balance in 3 years: $" + futureValue(3) + "\n";		
 		}
 		
-		
-		
-
 	}

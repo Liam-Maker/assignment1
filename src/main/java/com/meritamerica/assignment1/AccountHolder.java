@@ -24,6 +24,7 @@ public class AccountHolder {
 		mySsn = ssn;
 		myCheckingAccount = new CheckingAccount(checkingAccountOpeningBalance);
 		mySavingsAccount = new SavingsAccount(savingAccountOpeningBalance);
+		
 	}
 	
 	public String getFirstName() {
@@ -66,10 +67,11 @@ public class AccountHolder {
 	}
 	
 	public String toString(){
-		return "Name: " + myFirstName + " " + myMiddleName + " " + myLastName + "\n" +
+		return "Name: " + myFirstName + " " + myMiddleName + "" + myLastName + "\n" +
 			"SSN: " + mySsn + "\n" + 
 			myCheckingAccount.toString() +
 			mySavingsAccount.toString();
 					
 	}
+	
 }
